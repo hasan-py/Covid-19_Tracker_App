@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Page Title</title>
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background:#131417;
+			color:white;
+
+		}
+	</style>
+
+
+</head>
+<body>
+	
+	<!-- Header -->
+	<div class="jumbotron p-3 bg-dark text-center">
+		<h2 class="display-5">COVID-19 CORONAVIRUS PANDEMIC</h2>
+		<h4 id="lastUpdateDate" class="container lead"></h4>
+		<p style="font-size:12px;" class="muted" >Api link: https://covid19.mathdro.id/api </p>
+		<p style="font-size:12px;" class="lead">Created by <a style="font-size:12px; text-decoration:none; color:lightgreen;" href="http://github.com/hasan-py">HASAN</a></p>
+	</div>
+
+	<!-- Total Case Details -->
+	<div class="container">
+		<div class="row">
+
+			<div class="col-lg-4 col-sm-12 py-2">
+				<div class="card" style="width: 18rem; color:#252830">
+					<div class="card-body">
+						<h5 class="card-title text-center ">Total Confirmed</h5>
+						<h3 id="totalActive" class="card-text text-center"></h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-sm-12 py-2">
+				<div class="card" style="width: 18rem; color:#252830">
+					<div class="card-body">
+						<h5 class="card-title text-center">Total Death</h5>
+						<h3 id="totalDeath" class="card-text text-center"></h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-sm-12 py-2">
+				<div class="card" style="width: 18rem; color:#252830">
+					<div class="card-body">
+						<h5 class="card-title text-center">Total Recovered</h5>
+						<h3 id="totalRecovered" class="card-text text-center"></h3>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	
+
+	<div class="container col-lg-6 mt-4 mb-3 ">
+		<form class="form-group">
+			<label class="text-warning" for="search">Search Country: </label>
+  			<input type="text" class="form-control ml-2 mb-2 mr-sm-2" id="search" placeholder="Enter Counrty Name">
+		</form>
+		<input id="refresh" type="button" class="btn btn-sm btn-dark" value="Refresh Page" onClick="refresh">
+		
+		<p style="font-size:12px;"><br>N.B: If you not found.Please refresh and check the list.</p>
+	</div>
+
+
+	
+	<!-- Country Based Detail -->
+	<div class="container pt-3">
+		<table class="table-responsive-lg table-responsive-sm table table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Country</th>
+					<th scope="col">Confirmed Case</th>
+					<th scope="col">Active Case</th>
+					<th scope="col">Recovered</th>
+					<th scope="col">Deaths</th>
+					<th scope="col">Province State</th>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+
+			</tbody>
+		</table>
+	</div>
+
+
+
+
+
+	<!-- Axios CDN link -->
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="index.js"></script>
+
+	</html>
